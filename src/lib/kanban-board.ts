@@ -19,5 +19,10 @@ export class KanbanBoard {
 
   removeStatus(status: string) {
     this.statuses.splice(this.statuses.indexOf(status));
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(4);
+      }, 500);
+    });
   }
 }
